@@ -1,15 +1,11 @@
 version: "2"
 
-volumes:
-  db-data:
-    external: false
-
 services:
   db:
     image: postgres
     env_file: .env
-    volumes:
-      - db-data:/var/lib/postgresql/db-data
+    #volumes:
+    #  - db-data:/var/lib/postgresql/db-data
 
   app:
     #build: .
@@ -18,8 +14,8 @@ services:
     environment:
       RAILS_ENV: production
       SECRET_KEY_BASE: '79e67f66e15f01e70776a5ec2789f8658a76a7a4ef242fe23d780a65de8fbc1c2fb0fa7db2c869c50003c740b03374fa86d1317162ffeb9c0240d8d0d2548710'
-    volumes:
-      - .:/usr/src/app
+    #volumes:
+    #  - .:/usr/src/app
     ports:
       - "3000:3000"
     depends_on:
