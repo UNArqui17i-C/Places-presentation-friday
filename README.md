@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 # Places-Rails-Final
+# Places-presentation-friday

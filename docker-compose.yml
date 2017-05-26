@@ -9,7 +9,7 @@ services:
 
   app:
     #build: .
-    image: jaavargasar/lugaresapi_app
+    image: jaavargasar/placesrailsfinal_app
     env_file: .env
     environment:
       RAILS_ENV: production
